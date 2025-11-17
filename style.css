@@ -1,0 +1,238 @@
+/* BODY */
+html, body {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ffcee4 0%, #ffb6d2 60%, #ff8fc2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* PUMPKIN BASE */
+.pumpkin {
+    height: 11em;
+    width: 15em;
+    background: radial-gradient(circle at center, #ffc0cb 0%, #ff99aa 70%);
+    border: 0.4em solid #ff4d8b;
+    border-radius: 70%/110%;
+    position: relative;
+    box-shadow: inset 0 0 20px #ff4d8b, 0 0 30px -4px #ff6699;
+    z-index: 1;
+    animation: float 3s infinite;
+}
+
+/* MINNIE EARS */
+.pumpkin .ear {
+    position: absolute;
+    top: -2.5em;
+    width: 4em;
+    height: 4em;
+    background: black;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.pumpkin .ear.left { left: 1.5em; }
+.pumpkin .ear.right { right: 1.5em; }
+
+.bow {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    animation: bow-sway 2s infinite ease-in-out alternate;
+}
+
+@keyframes bow-sway {
+    0% { transform: translateX(-50%) rotate(-2deg); }
+    50% { transform: translateX(-50%) rotate(2deg); }
+    100% { transform: translateX(-50%) rotate(-2deg); }
+}
+
+
+.bow-left, .bow-right {
+    width: 3em;
+    height: 3em;
+    background: #ff3366;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Polka dots on bow */
+.bow-left::before, .bow-left::after,
+.bow-right::before, .bow-right::after {
+    content: '';
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    background: white;
+    border-radius: 50%;
+}
+
+.bow-left::before { top: 0.5em; left: 0.5em; }
+.bow-left::after { bottom: 0.5em; right: 0.5em; }
+.bow-right::before { top: 0.5em; right: 0.5em; }
+.bow-right::after { bottom: 0.5em; left: 0.5em; }
+
+.bow-left { transform: rotate(-20deg); }
+.bow-right { transform: rotate(20deg); }
+
+.bow-center {
+    width: 1.2em;
+    height: 1.2em;
+    background: #ff3366;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.9em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ORIGINAL PUMPKIN FACE */
+.pumpkin .eye {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0.8em solid transparent;
+    top: 2.8em;
+}
+
+.pumpkin .eye.right {
+    right: 3.7em;
+    border-left: 2.4em solid #401b03;
+    border-bottom: 2.1em solid transparent;
+    transform: rotate(30deg);
+}
+
+.pumpkin .eye.left {
+    left: 3.7em;
+    transform: rotate(-30deg);
+    border-bottom: 2.1em solid transparent;
+    border-right: 2.4em solid #401b03;
+}
+
+.pumpkin .mouth {
+    border-bottom: 1em solid #401b03;
+    position: absolute;
+    width: 4em;
+    height: 2em;
+    bottom: 1.5em;
+}
+
+.pumpkin .mouth.right {
+    right: 3.6em;
+    border-radius: 0 0 100% 0;
+}
+
+.pumpkin .mouth.left {
+    left: 3.6em;
+    border-radius: 0 0 0 1 100%;
+}
+
+.pumpkin .teeth {
+    border-left: 0.8em solid #401b03;
+    border-bottom: 0 solid transparent;
+    border-top: 0.8em solid transparent;
+    width: 0.5em;
+    height: 1em;
+    position: absolute;
+    top: 7.7em;
+    left: 7.25em;
+}
+
+.pumpkin .teeth::before,
+.pumpkin .teeth::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 0.8em solid transparent;
+}
+
+.pumpkin .teeth::before {
+    right: 2.2em;
+    top: -0.65em;
+    transform: rotate(30deg);
+    border-bottom: 0.5em solid transparent;
+    border-left: 1em solid #401b03;
+}
+
+.pumpkin .teeth::after {
+    left: 1em;
+    top: -0.65em;
+    transform: rotate(30deg);
+    border-bottom: 0.5em solid transparent;
+    border-left: 1em solid #401b03;
+}
+
+/* PUMPKIN TEXTURE */
+.pumpkin .texture {
+    height: 10.8em;
+    width: 6.5em;
+    position: absolute; 
+    bottom: -0.4em;
+    left: 4em;
+    border-radius: 70%/130%;
+    border-bottom: 0.5em solid #ff4d8b;
+    border-top: 0.5em solid #ff4d8b;
+}
+
+.pumpkin .texture::after {
+    content: '';
+    display: block;
+    height: 10.7em;
+    width: 12em;
+    position: absolute;
+    bottom: -0.4em;
+    left: -2.5em;
+    border-radius: 70%/130%;
+    border-bottom: 0.5em solid #ff4d8b;
+    border-top: 0.5em solid #ff4d8b;
+}
+
+/* STEM */
+.pumpkin .root {
+    background: #517f54;
+    height: 2.8em;
+    width: 1.25em;
+    position: absolute;
+    left: calc(7.5em - 0.625em);
+    top: -2.7em;
+    transform: rotate(5deg);
+    border-radius: 30% 20% 70% 10%;
+    z-index: 1;
+    box-shadow: inset 0 0 10px #29412b;
+}
+
+/* SHADOW */
+.shadow {
+    margin: 10% auto 0;
+    background: #000;
+    width: 230px;
+    height: 50px;
+    border-radius: 50%;
+    animation: zoom 3s infinite;
+}
+
+/* ANIMATION */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10%); }
+}
+
+@keyframes zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+}
