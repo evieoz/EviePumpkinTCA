@@ -1,4 +1,3 @@
-/* BODY */
 html, body {
     width: 100%;
     height: 100%;
@@ -9,7 +8,6 @@ html, body {
     overflow: hidden;
 }
 
-/* CONTAINER */
 .container {
     display: flex;
     justify-content: center;
@@ -17,7 +15,6 @@ html, body {
     flex-direction: column;
 }
 
-/* PUMPKIN BASE */
 .pumpkin {
     height: 11em;
     width: 15em;
@@ -30,7 +27,6 @@ html, body {
     animation: float 3s infinite;
 }
 
-/* MINNIE EARS */
 .pumpkin .ear {
     position: absolute;
     top: -2.5em;
@@ -69,7 +65,6 @@ html, body {
     position: relative;
 }
 
-/* Polka dots on bow */
 .bow-left::before, .bow-left::after,
 .bow-right::before, .bow-right::after {
     content: '';
@@ -99,7 +94,6 @@ html, body {
     transform: translateX(-50%);
 }
 
-/* ORIGINAL PUMPKIN FACE */
 .pumpkin .eye {
     position: absolute;
     width: 0;
@@ -177,7 +171,6 @@ html, body {
     border-left: 1em solid #401b03;
 }
 
-/* PUMPKIN TEXTURE */
 .pumpkin .texture {
     height: 10.8em;
     width: 6.5em;
@@ -202,7 +195,6 @@ html, body {
     border-top: 0.5em solid #ff4d8b;
 }
 
-/* STEM */
 .pumpkin .root {
     background: #517f54;
     height: 2.8em;
@@ -216,7 +208,6 @@ html, body {
     box-shadow: inset 0 0 10px #29412b;
 }
 
-/* SHADOW */
 .shadow {
     margin: 10% auto 0;
     background: #000;
@@ -226,7 +217,6 @@ html, body {
     animation: zoom 3s infinite;
 }
 
-/* ANIMATION */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10%); }
