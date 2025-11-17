@@ -104,7 +104,7 @@ html, body {
 
 .pumpkin .eye.right {
     right: 3.7em;
-    border-left: 2.4em solid #401b03;
+    border-left: 2.4em solid #000000;
     border-bottom: 2.1em solid transparent;
     transform: rotate(30deg);
 }
@@ -113,11 +113,11 @@ html, body {
     left: 3.7em;
     transform: rotate(-30deg);
     border-bottom: 2.1em solid transparent;
-    border-right: 2.4em solid #401b03;
+    border-right: 2.4em solid #000000;
 }
 
 .pumpkin .mouth {
-    border-bottom: 1em solid #401b03;
+    border-bottom: 1em solid #000000;
     position: absolute;
     width: 4em;
     height: 2em;
@@ -135,7 +135,7 @@ html, body {
 }
 
 .pumpkin .teeth {
-    border-left: 0.8em solid #401b03;
+    border-left: 0.8em solid #000000;
     border-bottom: 0 solid transparent;
     border-top: 0.8em solid transparent;
     width: 0.5em;
@@ -160,7 +160,7 @@ html, body {
     top: -0.65em;
     transform: rotate(30deg);
     border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401b03;
+    border-left: 1em solid #000000;
 }
 
 .pumpkin .teeth::after {
@@ -168,7 +168,7 @@ html, body {
     top: -0.65em;
     transform: rotate(30deg);
     border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401b03;
+    border-left: 1em solid #000000;
 }
 
 .pumpkin .texture {
